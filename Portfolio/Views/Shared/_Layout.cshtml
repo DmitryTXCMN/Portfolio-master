@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Tony - Bootstrap Freelancer Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="~/img/favicon.png" rel="icon">
+    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Tony</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a asp-controller="Home" asp-action="Work">Work</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="About">About</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Blog">Blog</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Contacts" asp-action="Index">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</header>
+@RenderBody()
+
+<footer class="border-top footer text-muted">
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>My Bunker</h4>
+                    <p>
+                        Some Address 987,<br/> +34 9054 5455, <br/> Madrid, Spain.
+                    </p>
+                </div>
+                <!-- /col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <h4>My Links</h4>
+                    <p>
+                        <a href="#">Dribbble</a><br/>
+                        <a href="#">Twitter</a><br/>
+                        <a href="#">Facebook</a>
+                    </p>
+                </div>
+                <!-- /col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <h4>About Tony</h4>
+                    <p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
+                </div>
+                <!-- /col-lg-4 -->
+            </div>
+        </div>
+    </div>
+
+    <div id="copyrights">
+        <div class="container">
+            <p>
+                &copy; Copyrights <strong>Tony</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+                Created with Tony template by <a href="https://templatemag.com/">TemplateMag</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
