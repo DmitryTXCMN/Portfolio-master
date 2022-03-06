@@ -19,9 +19,9 @@ public class EmailService : IEmailService
 
         var mime = new MimeMessage();
         mime.From.Add(new MailboxAddress("TONY!", _config.From));
-        mime.To.Add(new MailboxAddress(name, email));
+        mime.To.Add(new MailboxAddress(name, _config.OwnerMail));
         mime.Subject = subject;
-        mime.Body = new TextPart(MimeKit.Text.TextFormat.Text) {Text = "Automatic response for: \""+message+"\" \n DUCK UUUUUUUU!"};
+        mime.Body = new TextPart(MimeKit.Text.TextFormat.Text) {Text = $"New response from your site from {email}: \n {message}"};
         
         await client.SendAsync(mime);
     }

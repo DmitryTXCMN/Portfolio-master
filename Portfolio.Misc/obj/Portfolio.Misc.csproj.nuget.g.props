@@ -12,4 +12,8 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\Toxicman\.nuget\packages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\Toxicman\.nuget\packages\entityframework\6.0.0</PkgEntityFramework>
+    <PkgNpgsql_EntityFramework Condition=" '$(PkgNpgsql_EntityFramework)' == '' ">C:\Users\Toxicman\.nuget\packages\npgsql.entityframework\2.2.7</PkgNpgsql_EntityFramework>
+  </PropertyGroup>
 </Project>

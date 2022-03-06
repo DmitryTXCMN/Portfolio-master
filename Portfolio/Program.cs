@@ -1,4 +1,5 @@
 using Portfolio.Misc.Services.EmailSender;
+using Portfolio.Misc.Services.Logger;
 using Portfolio.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSingleton<IEmailService, EmailService>();
+builder.Services.AddSingleton<IResponseLogger, DBLogger>();
 
 builder.Services.AddSingleton(builder.Configuration
     .GetSection("EmailConfiguration")
